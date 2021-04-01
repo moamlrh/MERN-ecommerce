@@ -1,0 +1,46 @@
+.swiper-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  margin: 20px 0px;
+  .swiper {
+    height: 100%;
+    width: 100%;
+    background-color: greenyellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .swiper-slide {
+      width: 100% !important;
+      background-size: cover;
+      background-color: rgb(56, 56, 56);
+      background-repeat: no-repeat;
+      .slide-info {
+        height: 100%;
+        overflow: hidden;
+        .container-div {
+          transform: translate(10%, 90%);
+          .text {
+            h3 {
+              font-size: 25px;
+              color: white;
+              margin: 10px;
+            }
+            p {
+              color: gray;
+              margin: 10px;
+              font-size: 18px;
+            }
+          }
+          .info-btn{
+              margin: 10px;
+              .btn{
+                  color: white;
+              }
+          }
+        }
+      }
+    }
+  }
+}

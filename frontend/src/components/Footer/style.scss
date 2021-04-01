@@ -1,0 +1,23 @@
+.footer {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  text-align: center;
+  & > div {
+    h4 {
+      font-size: 19px;
+      padding: 10px;
+    }
+    p {
+      margin: 10px;
+    }
+    ul {
+      li {
+        list-style-type: none;
+        margin: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+}

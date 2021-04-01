@@ -1,0 +1,80 @@
+.drawer-container {
+  width: 350px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: auto;
+  position: relative;
+  .list-products {
+    width: 100%;
+    padding: 15px 0px;
+    margin: 0px auto;
+    .list-container {
+      display: flex;
+      align-items: center;
+      padding: 10px 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.089);
+      .image {
+        height: 100px;
+        width: 100px;
+        margin-right: 10px;
+        border-radius: 50%;
+        overflow: hidden;
+        img {
+          width: 100%;
+        }
+      }
+      .info {
+        .title {
+          margin: 10px 0px;
+          h3 {
+            font-size: 18px;
+          }
+        }
+        .price {
+          span {
+            font-size: 16px;
+          }
+        }
+        .add-more-or-remove {
+          display: flex;
+          align-items: center;
+          .puls-mins {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            span {
+              margin: 0px 10px;
+              font-size: 18px;
+              font-weight: 600;
+            }
+            .icon {
+              cursor: pointer;
+              padding: 10px;
+              transition: all 0.4s;
+              border-radius: 50%;
+              overflow: hidden;
+              &:hover {
+                background-color: rgba(128, 128, 128, 0.219);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .drawer-action {
+    position: sticky;
+    background-color: white;
+    height: 100px;
+    bottom: 0px;
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    box-shadow: 1px -10px 10px rgba(0, 0, 0, 0.123);
+  }
+}

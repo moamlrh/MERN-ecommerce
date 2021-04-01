@@ -1,0 +1,42 @@
+.product-component {
+  width: 350px;
+  min-width: 250px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  .card {
+    width: 100%;
+    &:hover{
+      .add-to-cart-btn {
+        background-color:#222529 ;
+        color: white;
+        transition: all .5s;
+      }
+    }
+    .card-content {
+      text-align: center;
+      .body2{
+        color: gray;
+      }
+    }
+    .card-action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      .add-to-cart-btn {
+        display: flex;
+        align-items: center;
+        .add-to-cart-icon {
+          font-size: 18px;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+.product-component .card-media {
+  height: 200px;
+  min-height: 200px;
+}

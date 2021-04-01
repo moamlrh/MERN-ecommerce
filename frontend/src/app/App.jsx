@@ -2,23 +2,26 @@ import React from "react";
 import Routes from "./Routes";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import { IntlProvider } from "react-intl";
+import { StylesProvider } from "@material-ui/styles";
 
-import store from "../redux/store";
+// import store from "../redux/store";
 import axiosConfig from "../config/AxiosConfig";
+import I18nProvider from "../config/I18n/I18nProvider";
 
 // axios config with default configration
-axiosConfig()
+axiosConfig();
 
 function App() {
   return (
-    // <IntlProvider>
+    <StylesProvider injectFirst>
       <BrowserRouter>
-        <Provider store={store}>
+        <I18nProvider local={"en"}>
+          {/* <Provider store={store}> */}
           <Routes />
-        </Provider>
+          {/* </Provider> */}
+        </I18nProvider>
       </BrowserRouter>
-    // </IntlProvider>
+    </StylesProvider>
   );
 }
 
