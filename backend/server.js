@@ -8,7 +8,7 @@ const authRoutes = require('./routers/authRoutes')
 
 
 // mongoose
-const MONDB_URI = process.env.MONGODB_URI_TEST //process.env.MONGODB_URI_TEST
+const MONDB_URI = process.env.MONGODB_URI //process.env.MONGODB_URI_TEST
 const connectTODatabase = require('./config/mongodbConfig')
 
 

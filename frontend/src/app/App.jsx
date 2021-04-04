@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { StylesProvider } from "@material-ui/styles";
 
-// import store from "../redux/store";
+import store from "../redux/store";
 import axiosConfig from "../config/AxiosConfig";
 import I18nProvider from "../config/I18n/I18nProvider";
 
@@ -16,9 +16,9 @@ function App() {
     <StylesProvider injectFirst>
       <BrowserRouter>
         <I18nProvider local={"en"}>
-          {/* <Provider store={store}> */}
-          <Routes />
-          {/* </Provider> */}
+          <Provider store={store}>
+            <Routes />
+          </Provider>
         </I18nProvider>
       </BrowserRouter>
     </StylesProvider>

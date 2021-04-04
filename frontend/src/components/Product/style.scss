@@ -6,16 +6,17 @@
   text-align: center;
   .card {
     width: 100%;
-    &:hover{
+    position: relative;
+    &:hover {
       .add-to-cart-btn {
-        background-color:#222529 ;
+        background-color: #222529;
         color: white;
-        transition: all .5s;
+        transition: all 0.5s;
       }
     }
     .card-content {
       text-align: center;
-      .body2{
+      .body2 {
         color: gray;
       }
     }
@@ -39,4 +40,13 @@
 .product-component .card-media {
   height: 200px;
   min-height: 200px;
+}
+.card-header {
+  background-color: rgba(247, 247, 247, 0.5);
+  position: absolute;
+  display: flex;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+  overflow: hidden;
 }

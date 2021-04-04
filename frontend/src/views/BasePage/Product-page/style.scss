@@ -5,8 +5,15 @@
     display: flex;
   }
   .images {
+    height: 100%;
     width: 600px;
+    min-height: 400px;
+    box-shadow: -5px 0px 20px rgba(0, 0, 0, 0.151);
     margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     img {
       width: 100%;
     }
@@ -18,16 +25,19 @@
   .title {
     h3 {
       font-size: 30px;
-      padding: 10px 0px;
+      padding: 20px 0px;
     }
   }
   .price {
-    font-size: 20px;
-    margin: 20px auto;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 30px auto;
   }
   .body {
+    margin: 20px auto;
     p {
-      font-size: 19px;
+      font-size: 20px;
+      margin: 20px auto;
       color: rgb(75, 75, 75);
     }
     .categories {
@@ -45,11 +55,8 @@
     .puls-mins {
       display: flex;
       align-items: center;
-      .icon {
-        cursor: pointer;
-      }
-      span {
-        font-size: 20px;
+      & > span {
+        font-size: 21px;
         margin: 0px 10px;
       }
     }
@@ -59,27 +66,34 @@
   }
 }
 
-.tabs {
-    padding: 20px 0px;
-    padding-bottom: 30px;
-  .tab-name {
-    display: flex;
-    h4 {
-      cursor: pointer;
-      padding: 20px;
-      margin: 10px;
-      font-size: 18px;
-      &:hover {
-        background-color: rgba(150, 150, 150, 0.171);
+.product-tabs{
+  margin: 20px auto;
+  .reviews{
+    .divider{
+      margin: 20px 0px;
+    }
+    .review-input{
+      &>* {
+        margin: 10px auto;
       }
     }
-  }
-  .tab-info {
-    padding: 0px 25px;
-    div{
-        p{
-            font-size: 17px;
+    .review-list{
+      margin: 10px auto;
+      display: flex;
+      align-items: center;
+      .item{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .user-info{
+          display: flex;
+          align-items: center;
+          &>*{
+            margin: auto 10px;
+          }
         }
+      }
     }
   }
 }
