@@ -1,0 +1,17 @@
+.circular-progress {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.liner-progress {
+}
+
+.products-loading {
+  width: 400px;
+  min-width: 250px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}

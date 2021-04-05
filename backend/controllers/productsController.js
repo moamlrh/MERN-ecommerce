@@ -1,6 +1,7 @@
 
 const ApiError = require('../config/errors/ApiError')
 const Product = require('../models/productModel')
+const { checkToken } = require('../util/token')
 
 //  products/get-all-products
 exports.getAllProducts = async (req, res, next) => {
@@ -25,7 +26,7 @@ exports.getProductById = async (req, res, next) => {
     try {
         const product = await Product.findById(id) // Product.findById(id, { reviews: { $slice: -2 } }) to limit reviews size
         if (!product) {
-            next(ApiError.newError(404,'There is no product with this id !'))
+            next(ApiError.newError(404, 'There is no product with this id !'))
         } else {
             return res.status(200).json({
                 msg: 'get product by id sccuessfully !',
@@ -33,7 +34,7 @@ exports.getProductById = async (req, res, next) => {
             })
         }
     } catch (error) {
-        next(ApiError.newError(401,'there is problem with get product with id, sorry !'))
+        next(ApiError.newError(401, 'there is problem with get product with id, sorry !'))
     }
 }
 

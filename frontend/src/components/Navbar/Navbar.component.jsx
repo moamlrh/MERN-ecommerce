@@ -15,6 +15,7 @@ import {
   Search,
   ShoppingCart,
 } from "@material-ui/icons";
+import { Link } from "react-router-dom";
 
 import { CartLeftDrawer, MobileMenu, RenderMenu } from "./components";
 import useStyles from "./style/style";
@@ -64,7 +65,9 @@ function NavbarComponent() {
               <MenuIcon />
             </IconButton>
             <Typography className={classes.title} variant="h6" noWrap>
-              E-commerce
+              <Link className="link" style={{color:'white'}} to="/">
+                E-commerce
+              </Link>
             </Typography>
             <div className={classes.search}>
               <div className={classes.searchIcon}>

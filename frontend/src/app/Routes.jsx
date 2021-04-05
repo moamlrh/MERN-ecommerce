@@ -15,7 +15,7 @@ const Routes = () => {
         </Route>
       ) : (
         <Route path="/">
-        <BasePage />
+          <BasePage />
         </Route>
       )}
     </Switch>

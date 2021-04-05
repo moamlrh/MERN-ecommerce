@@ -1,6 +1,7 @@
 const router = require('express').Router()
 
 const productsController = require('../controllers/productsController')
+const { checkToken } = require('../util/token')
 
 router.get('/get-all-products', productsController.getAllProducts)
 router.get('/get-product-by-id/:id', productsController.getProductById)

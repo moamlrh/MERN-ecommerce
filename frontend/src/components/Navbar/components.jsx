@@ -10,6 +10,7 @@ import {
 } from "@material-ui/core";
 import { AccountCircle, Add, Remove, ShoppingCart } from "@material-ui/icons";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const MobileMenu = ({
   mobileMoreAnchorEl,
@@ -67,7 +68,7 @@ export const RenderMenu = ({ anchorEl, isMenuOpen, handleMenuClose }) => {
   );
 };
 
-export const CartLeftDrawer = ({ cartDrawer, setCartDrawer }) => {
+export const CartLeftDrawer = ({ cart={}, cartDrawer, setCartDrawer }) => {
   return (
     <Drawer
       open={cartDrawer}
@@ -79,9 +80,11 @@ export const CartLeftDrawer = ({ cartDrawer, setCartDrawer }) => {
           <MenuListProducts product={product} key={idx} />
         ))}
         <div className="drawer-action">
-          <Button variant="outlined" color="primary">
-            View cart
-          </Button>
+          <Link className="link" to={`/cart/${cart.Id || 2}`} onClick={() => setCartDrawer(false)}>
+            <Button variant="outlined" color="primary">
+              View cart
+            </Button>
+          </Link>
           <Button variant="outlined" color="primary">
             Checkout
           </Button>
